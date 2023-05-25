@@ -5,28 +5,28 @@
 #define KEY_ESC 41
 
 
-	void setup() {
+    void setup() {
 
-	} // setup()
-
-
-	void loop() {
-
-		while ( digitalRead(PIN_BUTTON) == 0 ) {
-			DigiKeyboard.delay(10);
-		}
-
-		DigiKeyboard.update();
-		DigiKeyboard.sendKeyPress(KEY_ESC,0);
-		DigiKeyboard.delay(200);			
-		DigiKeyboard.sendKeyPress(0,0);   
+    } // setup()
 
 
-		while ( digitalRead(PIN_BUTTON) == 1 ) {
-			DigiKeyboard.delay(10);			
-		}
-	  
-		DigiKeyboard.delay(100);
+    void loop() {
 
-	} // loop()
+        while ( digitalRead(PIN_BUTTON) == 0 ) {
+            DigiKeyboard.delay(10);
+        }
+
+        DigiKeyboard.update();
+        DigiKeyboard.sendKeyPress(KEY_ESC,0);
+        DigiKeyboard.delay(200);
+        DigiKeyboard.sendKeyPress(0,0);
+
+
+        while ( digitalRead(PIN_BUTTON) == 1 ) {
+            DigiKeyboard.delay(10);
+        }
+
+        DigiKeyboard.delay(100);
+
+    } // loop()
 
